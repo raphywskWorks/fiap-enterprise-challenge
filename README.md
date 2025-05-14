@@ -169,7 +169,6 @@ Em fases futuras, será possível realizar a **integração real com sensores f�
 ## 🔐 Tutores com acesso
 
 - leoruiz197
-- LuscaFusca
 
 ---
 
