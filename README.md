@@ -148,11 +148,7 @@ Em fases futuras, será possível realizar a **integração real com sensores f�
 ---
 
 ## 📎 Observações
-
-- O repositório é privado e foi compartilhado com os tutores responsáveis.
-- Dados utilizados nesta fase são simulados.
-- Nenhum código funcional foi exigido nesta etapa, apenas a proposta da arquitetura.
-
+- Dados utilizados nesta fase são simulados, devido a quantidade de dados necessárias para cada sensor.
 ---
 
 ## 🔐 Tutores com acesso
