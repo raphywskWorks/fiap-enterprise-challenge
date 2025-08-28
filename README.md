@@ -87,12 +87,12 @@ Esses dados serão processados por modelos de Machine Learning que irão prever 
 
 ### Principais Entidades:
 
-- **PECAS**: id_peca, tipo, fabricante, tempo_uso_total
-- **SENSORES**: id_sensor, tipo_sensor, id_peca
-- **CICLOS_OPERACAO**: id_ciclo, id_peca, data_inicio, data_fim, duracao
-- **LEITURAS_SENSOR**: id_leitura, id_sensor, leitura_valor, leitura_data_hora
-- **FALHAS**: id_falha, id_peca, descricao, data
-- **ALERTAS**: id_alerta, id_falha, nivel_risco
+- **PECAS**: id_peca (PK), tipo, fabricante, tempo_uso_total
+- **SENSORES**: id_sensor (PK), tipo_sensor, id_peca (FK -> PECAS)
+- **CICLOS_OPERACAO**: id_ciclo (PK), id_peca (FK -> PECAS), data_inicio, data_fim, duracao
+- **LEITURAS_SENSOR**: id_leitura (PK), id_sensor (FK -> SENSORES), leitura_valor, leitura_data_hora
+- **FALHAS**: id_falha (PK), id_peca (FK PECAS), descricao, data
+- **ALERTAS**: id_alerta (PK), id_falha (FK -> FALHAS), nivel_risco
 
 ### Relacionamentos:
 
