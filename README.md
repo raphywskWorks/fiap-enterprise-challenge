@@ -13,7 +13,6 @@
 ## 👨‍🎓 Integrantes: 
 - <a href="https://www.linkedin.com/in/jonastadeufernandes/?locale=en_US">Jonas Tadeu V Fernandes</a>
 - <a href="">Levi Passos Silveira Marques</a>
-- <a href="https://www.linkedin.com/in/rannaleslie/">Ranna Leslie</a> 
 - <a href="">Raphael da Silva</a> 
 - <a href="[https://www.linkedin.com/company/inova-fusca](https://www.linkedin.com/in/raphael-dinelli-8a01b278/)">Raphael Dinelli Neto</a>
 
@@ -136,24 +135,14 @@ Em fases futuras, será possível realizar a **integração real com sensores f�
 
 ---
 
-## 👥 Equipe
-
-| Integrante     | Função                                |
-|----------------|----------------------------------------|
-| Jonas         | Modelagem de dados e banco relacional |
-| Ranna        | Simulação de sensores e coleta de dados |
-| Raphael Silva  | Modelagem de IA e predição de falhas  |
-| Raphael Dinelli | Desenvolvimento de backend e frontend |
-| Levi | Desenvolvimento de backend e frontend |
-
----
-
 ## ✅ Status da Entrega
 
 - ✅ Definição da arquitetura da solução
 - ✅ Modelagem inicial do banco de dados
 - ✅ Escolha das tecnologias e justificação
 - ✅ README documentado
+- ✅ Diagrama DER
+- ✅ Script SQL inicial com o código de criação das tabelas
 - ⬜ Implementação do MVP (futuro)
 
 ---
