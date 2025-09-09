@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="999B3264-2A05-A226-E50E-D1D526C1D29D" name="T_SIP_FALHAS">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>376A4CBC-9C04-F3ED-8B39-800102E2E06B</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_falhas" id="31BBEF58-551A-5B5D-4FDD-7CFB3E4F671D">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>95E2626F-CFE2-D5E6-9E67-75EB0D0504E6</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_peca" id="6B52B653-CB86-9D10-C829-A8E7DE3C9329">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>962DB71D-1208-D5C9-3E5C-83D6B1512624</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51E6118A-0A18-FC11-9A5D-AFFB63CEEFC2" referredColumn="4EAC7E1E-0B21-22AF-F35D-878AFEC6E4FE"/>
+</associations>
+</Column>
+<Column name="ds_falha" id="EE4B0351-4BE0-BD1B-9C2A-44FEF69DD870">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>8F5D5A0A-A7BE-7F29-EC6E-23B619646406</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sg_falha" id="5C556241-666C-CD4F-E6BF-F702A6758FAC">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>A292F4CB-46CF-425A-299E-F348D50BC3C0</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5 BYTE</dataTypeSize>
+<ownDataTypeParameters>5 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_falha" id="3B1FC8BF-3B99-850B-ED21-0FCA73942DFF">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>DA0A3D07-9635-AE26-2E4E-747ED26E7850</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8E26A969-733F-7C3B-30FE-F0055A19DA4D" name="PK_T_SIP_FALHAS">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>0B6DEFE7-5CEC-5234-9DAA-B48EF8B0A8A1</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31BBEF58-551A-5B5D-4FDD-7CFB3E4F671D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3870E49A-9C02-3A92-4227-81FF9B77C2A2" name="FK_SIP_FALHAS_PECA">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:54 UTC</createdTime>
+<generatorID>734A9102-B299-3237-C166-2397A5BE83D1</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B52B653-CB86-9D10-C829-A8E7DE3C9329"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

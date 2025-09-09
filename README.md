@@ -13,7 +13,7 @@
 ## 👨‍🎓 Integrantes: 
 - <a href="https://www.linkedin.com/in/jonastadeufernandes/?locale=en_US">Jonas Tadeu V Fernandes</a>
 - <a href="">Levi Passos Silveira Marques</a>
-- <a href="">Raphael da Silva</a> 
+- <a href="[https://www.linkedin.com/company/huskywell](https:www.linkedin.com/in/raphaelsilva-phael)">Raphael da Silva</a> 
 - <a href="[https://www.linkedin.com/company/inova-fusca](https://www.linkedin.com/in/raphael-dinelli-8a01b278/)">Raphael Dinelli Neto</a>
 
 ## 👩‍🏫 Professores:
@@ -83,24 +83,11 @@ Esses dados serão processados por modelos de Machine Learning que irão prever 
 
 ---
 
-## 🧱 Modelagem de Banco de Dados
+## 🧱 Diagrama ER (Entidade-Relacionamento)
 
-### Principais Entidades:
+### Oracle Data Modeler
 
-- **PECAS**: id_peca (PK), tipo, fabricante, tempo_uso_total
-- **SENSORES**: id_sensor (PK), tipo_sensor, id_peca (FK -> PECAS)
-- **CICLOS_OPERACAO**: id_ciclo (PK), id_peca (FK -> PECAS), data_inicio, data_fim, duracao
-- **LEITURAS_SENSOR**: id_leitura (PK), id_sensor (FK -> SENSORES), leitura_valor, leitura_data_hora
-- **FALHAS**: id_falha (PK), id_peca (FK PECAS), descricao, data
-- **ALERTAS**: id_alerta (PK), id_falha (FK -> FALHAS), nivel_risco
-
-### Relacionamentos:
-
-- Uma peça possui vários sensores (1:N)
-- Uma peça possui vários ciclos de operação (1:N)
-- Cada ciclo possui várias leituras (1:N)
-- Uma peça pode ter várias falhas (1:N)
-- Cada falha pode gerar múltiplos alertas (1:N)
+<img src="./assets/enterprise_challenge.png" alt="Oracle Data Modeler" border="0" width=100% height=100%></a>
 
 ---
 
@@ -159,7 +146,8 @@ Em fases futuras, será possível realizar a **integração real com sensores f�
 
 ## 🗃 Histórico de lançamentos
 * 0.1.0 - 14/05/2025
-    *
+* 0.2.0 - 08/09/2025
+    
 
 ## 📋 Licença
 

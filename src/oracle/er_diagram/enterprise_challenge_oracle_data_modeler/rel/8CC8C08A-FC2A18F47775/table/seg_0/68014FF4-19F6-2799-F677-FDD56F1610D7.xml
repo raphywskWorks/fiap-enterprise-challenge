@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="68014FF4-19F6-2799-F677-FDD56F1610D7" name="T_SIP_CICLO_OPERACAO">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>DEFFA367-8008-2586-EE64-7FE0E4E30840</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_ciclo" id="B63F8BB9-F299-947C-5B4C-14C641782F3B">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>1F016D4A-AABA-99E5-3DB6-D203BD6CAE7F</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_peca" id="ED33F9B2-9C0C-7BD9-8C53-71C2373202C2">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>3EDE61DE-D9A1-F898-4529-26FFCD32F079</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B43D23AA-E511-5828-D5FC-5F1B76507F66" referredColumn="4EAC7E1E-0B21-22AF-F35D-878AFEC6E4FE"/>
+</associations>
+</Column>
+<Column name="dt_inicio" id="CC19EEB1-1703-A5B6-7BF2-13F779CEE6E1">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>636F3FBD-7E10-2EFD-8E0A-236DA389E4B3</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_termino" id="B9EA50B0-D159-6E00-638E-1F3590136ECF">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>A118C754-4CCF-178B-DB7C-748399DA7877</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dr_ciclo" id="AB0F1C3F-4B20-957C-6CCF-EB066EAF10FB">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>CBF93FD7-BACF-9F36-AF69-FF708E37B482</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A7EB797C-99F8-1090-5B8E-76314BAE74BD" name="PK_T_SIP_CICLO_OPERACAO">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>F4777C4D-3845-4D4C-8260-2D4AE32E6CAF</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B63F8BB9-F299-947C-5B4C-14C641782F3B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1BDC1AE3-064B-0E3E-C2F3-174B802BF131" name="FK_SIP_CICLO_OP_PECA">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:54 UTC</createdTime>
+<generatorID>8C80CA83-E376-E908-7A12-D714576C6533</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED33F9B2-9C0C-7BD9-8C53-71C2373202C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

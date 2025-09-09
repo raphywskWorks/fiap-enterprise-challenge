@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B43D23AA-E511-5828-D5FC-5F1B76507F66" containerWithKeyObject="68014FF4-19F6-2799-F677-FDD56F1610D7" localFKIndex="1BDC1AE3-064B-0E3E-C2F3-174B802BF131" name="FK_SIP_CICLO_OP_PECA">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:54 UTC</createdTime>
+<generatorID>8C80CA83-E376-E908-7A12-D714576C6533</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<referredTableLongName>T_SIP_PECA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E9DAC2C5-9772-DEE7-FE40-719E590E5CA2</referredTableID>
+<keyObject>21015C86-0FA8-D87F-F7B5-F008D8DA33CC</keyObject>
+<referredKeyID>21015C86-0FA8-D87F-F7B5-F008D8DA33CC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_peca</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

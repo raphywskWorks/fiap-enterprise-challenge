@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DEFFA367-8008-2586-EE64-7FE0E4E30840" name="T_SIP_CICLO_OPERACAO">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 14:46:30 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_ciclo" id="1F016D4A-AABA-99E5-3DB6-D203BD6CAE7F">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 14:46:53 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_peca" id="3EDE61DE-D9A1-F898-4529-26FFCD32F079">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 15:19:45 UTC</createdTime>
+<generatorID>8C80CA83-E376-E908-7A12-D714576C6533</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<referedAttribute>20B8A5DF-1FE9-F3F8-B553-A17ACFF107F3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_inicio" id="636F3FBD-7E10-2EFD-8E0A-236DA389E4B3">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 14:47:20 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_termino" id="A118C754-4CCF-178B-DB7C-748399DA7877">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 14:47:53 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dr_ciclo" id="CBF93FD7-BACF-9F36-AF69-FF708E37B482">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 14:48:08 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F4777C4D-3845-4D4C-8260-2D4AE32E6CAF" name="T_SIP_CICLO_OPERACAO PK">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 14:47:07 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1F016D4A-AABA-99E5-3DB6-D203BD6CAE7F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

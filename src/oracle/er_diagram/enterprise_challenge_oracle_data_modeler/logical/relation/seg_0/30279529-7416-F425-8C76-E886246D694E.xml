@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ter" directorySegmentName="seg_0" id="30279529-7416-F425-8C76-E886246D694E">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 15:20:35 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<sourcePk>7E0CC8B5-567E-CFB7-D93A-F99F1C3CA8AA</sourcePk>
+<targetPk>8291BFF6-5251-90DA-4BB9-BE7065426F4C</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C5C94C91-ADC1-D5FE-400C-DA7674648A3F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F6883F88-C435-E337-4485-6BE47BFFA635</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

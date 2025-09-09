@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="gera" directorySegmentName="seg_0" id="6F73BA79-77F4-92AA-E432-1FF50ECD8A66">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 15:26:41 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<sourcePk>0B6DEFE7-5CEC-5234-9DAA-B48EF8B0A8A1</sourcePk>
+<targetPk>547143CD-9DED-5B62-BF10-85CCC32121D1</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>376A4CBC-9C04-F3ED-8B39-800102E2E06B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5C1DBDC6-D2AB-F490-59E9-10FC2395B74C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

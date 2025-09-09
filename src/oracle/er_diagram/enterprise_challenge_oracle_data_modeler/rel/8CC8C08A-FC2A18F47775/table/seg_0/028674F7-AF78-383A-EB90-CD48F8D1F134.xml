@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="028674F7-AF78-383A-EB90-CD48F8D1F134" name="T_SIP_SENSOR">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>F6883F88-C435-E337-4485-6BE47BFFA635</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_sensor" id="AD844FBC-770A-321C-1E7E-1CE4F644DF68">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>EFF0F5A7-377B-9140-83F9-4DEBB403CDCC</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_peca" id="87B49883-28B7-5FE1-0F61-6161799BA61C">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>159EE7EC-4857-F7B7-B883-CA00A6FB3C50</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2D78F6A8-064F-ACF3-C9EC-7DE156EEC3AD" referredColumn="4EAC7E1E-0B21-22AF-F35D-878AFEC6E4FE"/>
+</associations>
+</Column>
+<Column name="tp_sensor" id="B8E3C19F-24C2-8D3F-CB65-8E954CB61608">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>A1395417-68D4-DA14-9F86-5353A181EEE2</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_fabricante" id="A4299F77-DBC3-A3A3-9EE6-F93557FEA65A">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>F29A48A7-B6A5-0538-5ECA-54341F039111</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_instalacao" id="0ED9355F-9054-3395-CF29-40BAC8EDB025">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>03CF4C2C-32E8-358B-AE76-9AF3BF2D1B64</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="md_sensor" id="984ED16A-0D69-D1DF-24E6-310338CC1316">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>090CFE18-C932-9959-1039-B0CA6B60E473</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="85E254FD-0F96-8E68-3D06-9051A2907D15" name="PK_T_SIP_SENSOR">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>8291BFF6-5251-90DA-4BB9-BE7065426F4C</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD844FBC-770A-321C-1E7E-1CE4F644DF68"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="58006C73-76B5-A95F-C675-39FF0B0C1D79" name="FK_SIP_SENSOR_PECA">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:54 UTC</createdTime>
+<generatorID>30279529-7416-F425-8C76-E886246D694E</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="87B49883-28B7-5FE1-0F61-6161799BA61C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
