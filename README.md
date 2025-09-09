@@ -137,6 +137,9 @@ Construir um **banco de dados relacional** normalizado para armazenar leituras d
 - Uma peça pode ter várias falhas (1:N)
 - Cada falha pode gerar múltiplos alertas (1:N)
 
+### DDL
+ - `src/database/DDL.sql`
+
 ### DER
 Imagem exportada do Oracle SQL Developer Data Modeler:
 - `assets/Diagrama-ER.png`
