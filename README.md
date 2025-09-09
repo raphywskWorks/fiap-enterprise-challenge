@@ -184,7 +184,11 @@ Em fases futuras, será possível realizar a **integração real com sensores f�
 - **Split temporal:** 70% início → treino; 30% final → teste.  
 - **Artefatos gerados:**  
   - `assets/matriz_confusao_estado.png`  
+    <p align="center"><img src="assets/matriz_confusao_estado.png" alt="DER" width="85%"></p>
+
   - `assets/feature_importance_estado.png`  
+    <p align="center"><img src="assets/feature_importance_estado.png" alt="DER" width="85%"></p>
+
   - `src/machine-learning/models/modelo_estado_peca.joblib`
 
 ### Modelo 2 — Previsão de falha nas próximas 24h
@@ -200,17 +204,11 @@ Em fases futuras, será possível realizar a **integração real com sensores f�
 
   - `assets/roc_falha_24h.png` 
     <p align="center"><img src="assets/roc_falha_24h.png" alt="DER" width="85%"></p>
-    
+
   - `src/machine-learning/models/modelo_falha_24h.joblib`
 
 ### Resultados
-Imagens dos resultados:
-- `assets/matriz_confusao_estado.png`  
-- `assets/feature_importance_estado.png`  
-- `assets/matriz_confusao_falha_24h.png`  
-- `assets/roc_falha_24h.png`
 
-**Resumo:**
 - **Classificação (estado da peça):**  
   - Accuracy = **1.00**  
   - Macro-F1 = **1.00**  
