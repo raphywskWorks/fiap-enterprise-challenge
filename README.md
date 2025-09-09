@@ -6,9 +6,9 @@
 
 <br>
 
-# Nome do projeto
+# FIAP x Hermes Reply — Monitoramento de Deterioração e Vida Útil das Peças
 
-## Nome do grupo
+## Grupo Sp e Interior
 
 ## 👨‍🎓 Integrantes: 
 - <a href="https://www.linkedin.com/in/jonastadeufernandes/?locale=en_US">Jonas Tadeu V Fernandes</a>
@@ -16,12 +16,15 @@
 - <a href="">Raphael da Silva</a> 
 - <a href="[https://www.linkedin.com/company/inova-fusca](https://www.linkedin.com/in/raphael-dinelli-8a01b278/)">Raphael Dinelli Neto</a>
 
+**Curso:** FIAP — Fase 5  
+**Empresa parceira:** Hermes Reply  
+**Tema:** Modelagem de banco relacional + ML básico aplicado a dados de sensores industriais
+
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
 - <a href="https://www.linkedin.com/company/inova-fusca">Leonardo Ruiz Orbana</a>
 ### Coordenador(a)
 - <a href="https://www.linkedin.com/company/inova-fusca">André Godoi Chiovato</a>
-
 
 ## 📜 Descrição
 
@@ -83,6 +86,38 @@ Esses dados serão processados por modelos de Machine Learning que irão prever 
 
 ---
 
+## 🖼️ Arquitetura da Solução
+
+A imagem abaixo representa a arquitetura proposta do sistema, integrando sensores, banco de dados e modelos de IA:
+
+<img src="./assets/enterprise-challenge.JPG">
+
+---
+
+## 📆 Plano de Desenvolvimento
+
+1. Simulação dos dados de sensores
+2. Modelagem relacional do banco de dados
+3. Criação do pipeline de ingestão e armazenamento
+4. Desenvolvimento do modelo de IA
+5. Criação de dashboards com alertas preditivos
+6. Integração final e testes
+
+---
+
+# Objetivo desta etapa
+Construir um **banco de dados relacional** normalizado para armazenar leituras de sensores industriais e, a partir desses dados, treinar **dois modelos de ML**:
+1. **Classificação** do estado da peça (**Saudável / Desgastada / Crítica**).
+2. **Previsão** de falha em horizonte fixo (**próximas 24h**).
+
+## Visão Geral da Solução
+- **Coleta (simulada):** leituras de temperatura/vibração + tempo de uso e ciclos.  
+- **Armazenamento:** modelo relacional com tabelas de peças, sensores, ciclos, leituras, falhas e alertas.  
+- **ML:**  
+  - Modelo 1: RandomForest multiclasse (estado da peça).  
+  - Modelo 2: GradientBoosting binário (falha em 24h) com features de janela.  
+- **Documentação:** DER exportado, DDL, CSV e gráficos de resultado.
+
 ## 🧱 Modelagem de Banco de Dados
 
 ### Principais Entidades:
@@ -102,19 +137,25 @@ Esses dados serão processados por modelos de Machine Learning que irão prever 
 - Uma peça pode ter várias falhas (1:N)
 - Cada falha pode gerar múltiplos alertas (1:N)
 
----
+### DER
+Imagem exportada do Oracle SQL Developer Data Modeler:
+- `assets/Diagrama-ER.png`
 
-## 🖼️ Arquitetura da Solução
+<p align="center">
+  <img src="assets/Diagrama-ER.png" alt="DER" width="85%">
+</p>
 
-A imagem abaixo representa a arquitetura proposta do sistema, integrando sensores, banco de dados e modelos de IA:
-
-<img src="./assets/enterprise-challenge.JPG">
+### Script DDL
+- `src/database/DDL.sql`  
 
 ---
 
 ## 📊 Estratégia de Coleta de Dados
 
-Nesta fase inicial, os dados serão **simulados** por meio de scripts Python que imitam a operação dos sensores conectados a um ESP32. Serão gerados:
+Nesta fase inicial, os dados serão **simulados** por meio de scripts Python que imitam a operação dos sensores conectados a um ESP32.
+Devido a quantidade de sensores e dados necessários para treinar os modelos, optamos pela simulação via script, pois permite maior aleatóriedade dos dados.
+
+Serão gerados:
 
 - Ciclos de operação aleatórios
 - Leituras de temperatura variando com o tempo
@@ -122,18 +163,124 @@ Nesta fase inicial, os dados serão **simulados** por meio de scripts Python que
 
 Em fases futuras, será possível realizar a **integração real com sensores físicos ESP32**, via conexão Wi-Fi e envio dos dados diretamente para o banco na nuvem.
 
----
-
-## 📆 Plano de Desenvolvimento
-
-1. Simulação dos dados de sensores
-2. Modelagem relacional do banco de dados
-3. Criação do pipeline de ingestão e armazenamento
-4. Desenvolvimento do modelo de IA
-5. Criação de dashboards com alertas preditivos
-6. Integração final e testes
+**Script para consolidação dos dados das tabelas sql em arquivo csv**: `src/database/csv_create.sql`
 
 ---
+
+## Dados Utilizados
+- **CSV**: `src/database/sensores.csv`  
+  - Colunas: `id_leitura, id_sensor, id_peca, sensor_tipo, leitura_data_hora, tempo_uso, ciclos, temperatura, vibracao, falha, risco_falha`  
+  - **Observação:** as colunas `temperatura` e `vibracao` são valores consolidados “último conhecido por peça” até o timestamp.
+
+---
+
+## Machine Learning
+
+### Modelo 1 — Classificação do estado da peça
+- **Arquivo:** `src/machine-learning/part_status_classifier.py`  
+- **Problema:** multiclasse (Saudável / Desgastada / Crítica), mapeado do rótulo `risco_falha`.  
+- **Features:** `tempo_uso`, `ciclos`, `temperatura`, `vibracao`.  
+- **Algoritmo:** `RandomForestClassifier`.  
+- **Split temporal:** 70% início → treino; 30% final → teste.  
+- **Artefatos gerados:**  
+  - `assets/matriz_confusao_estado.png`  
+    <p align="center"><img src="assets/matriz_confusao_estado.png" alt="DER" width="85%"></p>
+
+  - `assets/feature_importance_estado.png`  
+    <p align="center"><img src="assets/feature_importance_estado.png" alt="DER" width="85%"></p>
+
+  - `src/machine-learning/models/modelo_estado_peca.joblib`
+
+### Modelo 2 — Previsão de falha nas próximas 24h
+- **Arquivo:** `src/machine-learning/failure_predict24_hours.py`  
+- **Problema:** binário (falha nas próximas 24h).  
+- **Rótulo:** `fail_next_h` (1 se existir `falha==1` para a **mesma peça** em `(t, t+24h]`).  
+- **Features:** básicas + janelas móveis (médias, desvios e deltas 3/6/12 passos).  
+- **Algoritmo:** `GradientBoostingClassifier`.  
+- **Split temporal:** 70%/30%.  
+- **Artefatos:**  
+  - `assets/matriz_confusao_falha_24h.png`  
+    <p align="center"><img src="assets/matriz_confusao_falha_24h.png" alt="DER" width="85%"></p>
+
+  - `assets/roc_falha_24h.png` 
+    <p align="center"><img src="assets/roc_falha_24h.png" alt="DER" width="85%"></p>
+
+  - `src/machine-learning/models/modelo_falha_24h.joblib`
+
+### Resultados
+
+- **Classificação (estado da peça):**  
+  - Accuracy = **1.00**  
+  - Macro-F1 = **1.00**  
+  - Principais variáveis: tempo_uso (46.6%), ciclos (38.6%), vibração (12.6%), temperatura (2.1%).  
+
+- **Previsão de falha (24h):**  
+  - Accuracy = **0.967**  
+  - ROC-AUC = **0.50**  
+  - F1 (classe 1 = falha) = **0.983**  
+  - Observação: o modelo aprendeu quase apenas a prever a classe “falha”. Isso ocorreu devido ao forte **desbalanceamento de classes** (378 falhas vs. 13 não-falhas). Em projetos reais, técnicas de reamostragem, ajuste de limiar e uso de métricas específicas (F1/Recall da classe minoritária) seriam necessárias.
+
+  > **Justificativa dos gráficos**  
+> - **Matriz de confusão:** mostra acertos/erros por classe.  
+> - **Importância de features:** explica a contribuição relativa de cada variável no modelo 1.  
+> - **Curva ROC/AUC:** avalia separação entre classes no modelo 2 para diferentes limiares.
+
+---
+
+## Como Reproduzir
+
+### Ambiente Local
+```bash
+# Python 3.9+
+pip install -r requirements.txt
+# Rodar modelo 1
+python src/machine-learning/part_status_classifier.py
+# Rodar modelo 2
+python src/machine-learning/failure_predict24_hours.py
+```
+
+**requirements.txt** sugerido
+
+```bash
+pandas
+numpy
+scikit-learn
+matplotlib
+joblib
+```
+
+### Google Colab
+ - Faça upload de sensores.csv e copie para src/database/sensores.csv.
+ - Instale dependências: !pip -q install pandas numpy scikit-learn matplotlib joblib.
+ - Execute os scripts (células fornecidas neste repositório/README).
+ - Baixe os gráficos de assets/ e faça commit no repositório.
+
+---
+
+## Estrutura do Repositório
+
+```bash
+assets/
+  Diagrama-ER.png
+  feature_importance_estado.png
+  matriz_confusao_estado.png
+  matriz_confusao_falha_24h.png
+  roc_falha_24h.png
+
+src/
+  database/
+    DDL.sql
+    sensores.csv
+  machine-learning/
+    part_status_classifier.py
+    failure_predict24_hours.py
+    models/
+      modelo_estado_peca.joblib
+      modelo_falha_24h.joblib
+
+README.md
+
+```
 
 ## ✅ Status da Entrega
 
@@ -143,6 +290,7 @@ Em fases futuras, será possível realizar a **integração real com sensores f�
 - ✅ README documentado
 - ✅ Diagrama DER
 - ✅ Script SQL inicial com o código de criação das tabelas
+- ✅ Algoritmos de classificação e predição dos estados das peças
 - ⬜ Implementação do MVP (futuro)
 
 ---
@@ -151,14 +299,9 @@ Em fases futuras, será possível realizar a **integração real com sensores f�
 - Dados utilizados nesta fase são simulados, devido a quantidade de dados necessárias para cada sensor.
 ---
 
-## 🔐 Tutores com acesso
-
-- leoruiz197
-
----
 
 ## 🗃 Histórico de lançamentos
-* 0.1.0 - 14/05/2025
+* 0.2.0 - 09/09/2025
     *
 
 ## 📋 Licença
