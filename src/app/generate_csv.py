@@ -10,7 +10,7 @@ config = {
 }
 
 # Caminhos
-sql_file = "src/app/database/csv_create.sql"
+sql_file = "src/app/database/DLL.sql"
 output_csv = "src/app/database/sensores.csv"
 
 # Conexão com o MySQL
