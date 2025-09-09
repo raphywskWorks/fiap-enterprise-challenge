@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2E0179C9-CED8-BFA1-BDB3-818CBBE0CE10" name="T_SIP_LEITURA_SENSOR">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 14:52:47 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_leitura" id="0858D64C-784B-4ECD-9176-66A7FB651049">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 14:53:17 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_ciclo" id="DCE3C619-FB21-FC2B-2C7C-AC07945C10E7">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 15:22:06 UTC</createdTime>
+<generatorID>273D9AAC-4F41-6682-376F-74E4463FFBA2</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<referedAttribute>1F016D4A-AABA-99E5-3DB6-D203BD6CAE7F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_leitura" id="A0382EF6-4859-5A1B-AB7F-C635E69D94EF">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 14:53:33 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_hr_leitura" id="BDEB23A6-918B-82F4-898D-CD18C88AC5ED">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 14:54:15 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B5871F98-68F8-D6F4-7AB5-7012A40BDC36" name="T_SIP_LEITURA_SENSOR PK">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 14:53:30 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<engineerTo>
+<item key="8CC8C08A-1DCF-5E74-5CAD-FC2A18F47775" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0858D64C-784B-4ECD-9176-66A7FB651049</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

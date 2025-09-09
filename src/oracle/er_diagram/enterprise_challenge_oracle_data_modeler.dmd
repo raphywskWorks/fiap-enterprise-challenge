@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="enterprise_challenge_oracle_data_modeler" id="D219DDF8-6E26-86B7-6607-CE8E5A202928" version="3.5">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 14:34:20 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>D219DDF8-6E26-86B7-6607-CE8E5A202928</designId>
+</OSDM_Design>

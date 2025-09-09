@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9E0AE350-845E-1D48-21B0-4601A05474E1" name="T_SIP_LEITURA_SENSOR">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>2E0179C9-CED8-BFA1-BDB3-818CBBE0CE10</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_leitura" id="161284DF-FA17-3195-F54F-40B6DF24E84A">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>0858D64C-784B-4ECD-9176-66A7FB651049</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_ciclo" id="F3C7CA9F-EA04-F52C-488E-903A90B5D9CF">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>DCE3C619-FB21-FC2B-2C7C-AC07945C10E7</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FB45E738-75AA-5E1D-584E-50E777FC13B5" referredColumn="B63F8BB9-F299-947C-5B4C-14C641782F3B"/>
+</associations>
+</Column>
+<Column name="vl_leitura" id="99541679-35BF-91DA-91B2-495065E4036A">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>A0382EF6-4859-5A1B-AB7F-C635E69D94EF</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_hr_leitura" id="703B5D44-7DE5-A7E1-3786-A395A9B59930">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>BDEB23A6-918B-82F4-898D-CD18C88AC5ED</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BB13B44C-4DE1-20BC-0896-0855EB3D8830" name="PK_T_SIP_LEITURA_SENSOR">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>B5871F98-68F8-D6F4-7AB5-7012A40BDC36</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="161284DF-FA17-3195-F54F-40B6DF24E84A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2EB9FA62-C39D-1694-433A-77FBC4788C46" name="FK_SIP_LEITURA_SENSOR_CICLO_OP">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 22:41:53 UTC</createdTime>
+<generatorID>273D9AAC-4F41-6682-376F-74E4463FFBA2</generatorID>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3C7CA9F-EA04-F52C-488E-903A90B5D9CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CK_SIP_LEITURA_SENSOR_VALOR" directorySegmentName="seg_0" id="29833C80-D498-61E3-FC15-82DEAD050A23">
+<createdBy>rapha</createdBy>
+<createdTime>2025-09-08 23:18:15 UTC</createdTime>
+<ownerDesignName>enterprise_challenge_oracle_data_modeler</ownerDesignName>
+<rule><![CDATA[VL_LEITURA != 0]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>
