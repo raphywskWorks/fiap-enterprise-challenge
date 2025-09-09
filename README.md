@@ -147,8 +147,6 @@ Imagem exportada do Oracle SQL Developer Data Modeler:
 
 ### Script DDL
 - `src/database/DDL.sql`  
-> **Observação:** DDL = *Data Definition Language* (comandos `CREATE TABLE`, chaves e FKs).  
-> Se o arquivo estiver nomeado como `DLL.sql`, recomendamos renomear para `DDL.sql`.
 
 ---
 
