@@ -196,9 +196,7 @@ Em fases futuras, será possível realizar a **integração real com sensores f�
 - **Split temporal:** 70%/30%.  
 - **Artefatos:**  
   - `assets/matriz_confusao_falha_24h.png`  
-  <p align="center">
-    <img src="assets/matriz_confusao_falha_24h.png" alt="DER" width="85%">
-  </p>
+  - <p align="center"><img src="assets/matriz_confusao_falha_24h.png" alt="DER" width="85%"></p>
   - `assets/roc_falha_24h.png` 
   - `src/machine-learning/models/modelo_falha_24h.joblib`
 
