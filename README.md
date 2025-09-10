@@ -287,7 +287,7 @@ README.md
 
 ## Link do video explicativo: 
 
-```https://www.youtube.com/watch?v=gZ8fwobi3Y4
+- https://www.youtube.com/watch?v=gZ8fwobi3Y4
 
 ## ✅ Status da Entrega
 
